@@ -23,22 +23,12 @@ class MainActivity : AppCompatActivity() {
             val user = User(1,"zhangsan","ss")
             val user2 = User(2,"zhangsan","ss")
             lifecycleScope.launch {
-                for (i in 1..2){
-                    //取代for(int i=0;i<10;++i)    [1,10]
-                    UserDataBase.get(applicationContext).userDao().insertAll(user,user2)
-                    val users: List<User> = UserDataBase.get(applicationContext).userDao().getAll()
-                    tvContent.setText(users.toString())
-                    Log.i("*************","xunhuan"+i)
-                }
-                Log.i("*************","over")
-            }
-            lifecycleScope.launch {
-                UserDataBase.get(applicationContext).userDao().delete(user)
+                //取代for(int i=0;i<10;++i)    [1,10]
+                UserDataBase.get(applicationContext).userDao().insertAll(user,user2)
                 val users: List<User> = UserDataBase.get(applicationContext).userDao().getAll()
                 tvContent.setText(users.toString())
-                Log.i("*************","hahhaha")
-            }
 
+            }
         }
         findViewById<Button>(R.id.bt_delate).setOnClickListener {
             val user = User(1,"zhangsan","ss")
