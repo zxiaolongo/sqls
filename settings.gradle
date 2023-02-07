@@ -8,3 +8,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "sqls"
 include ':app'
+include ':myrealm'
