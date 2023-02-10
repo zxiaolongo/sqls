@@ -53,6 +53,6 @@ dependencies {
     //可选 - RxJava 支持
     //implementation "androidx.room:room-rxjava2:$room_version"
 
-
+    //lifecycleScope
     implementation "androidx.lifecycle:lifecycle-runtime-ktx:2.2.0"
 }

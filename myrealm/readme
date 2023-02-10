@@ -1,0 +1,21 @@
+#下载地址 realm官网上有版本 库中
+https://realm.io/
+gitee
+https://gitcode.net/mirrors/realm/realm-java?utm_source=csdn_github_accelerator
+github
+https://github.com/realm/realm-java
+文档
+https://www.mongodb.com/docs/realm/sdk/java/install/
+这个文档很好   https://www.shuzhiduo.com/A/kmzLPZYXzG/
+这个文档很好   https://www.bbsmax.com/A/KE5Q1QMy5L/
+1、模式，realm整体采用单例模式，所以一次数据库操作，都是在一个线程中进行的，
+不可夸线程的读取操作数据，所以在使用时候尽量使用异步操作（尽管realm提供了同步和异步两种），
+这样对Androidx会很友好。
+
+realm主要由3个部分组成：
+RealmObject:
+表示数据库中的表，数据实体，对应数据库中的表。
+RealmOperationHelper:
+包含用于访问数据库的方法，数据访问对象，包含访问数据库的方法，数据访问对象是realm的主要组件，负责定义访问数据库的方法。
+Realm.getInstance:
+包含数据库持有者，并作为应用程序持久关系数据的基础连接的主要访问点：
